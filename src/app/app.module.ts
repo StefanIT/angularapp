@@ -25,6 +25,7 @@ import { HttpModule, BaseRequestOptions } from '@angular/http';
 
 import { fakeBackendProvider } from './helpers/fake-backend';
 import { MockBackend } from '@angular/http/testing';
+import { CommentsComponent } from './components/single-movie/comments/comments.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { MockBackend } from '@angular/http/testing';
     IteratorPipe,
     HomeComponent,
     SingleMovieComponent,
-    ContactComponent
+    ContactComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,

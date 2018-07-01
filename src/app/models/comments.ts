@@ -1,8 +1,8 @@
 export interface Comments {
-    id: number,
-    first: string,
-    last: string,
+    id: string,
+    name: string,
     email: string,
     subject: string,
-    message: string
+    message: string,
+    movieId: number
 }

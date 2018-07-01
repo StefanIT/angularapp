@@ -28,7 +28,7 @@ export class LoginModalComponent implements OnInit {
   @Input() visible: boolean;
   @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  invalidLogin;
+  invalidLogin : Boolean;
 
   forma = new FormGroup({
     email : new FormControl('',[

@@ -10,23 +10,18 @@
               <div class="form">
               <h3>Login to your account</h3>
               <form name="forma" #forma="ngForm">
+                  
+                <div  *ngIf="invalidLogin" class="alert alert-danger">Incorrect email/password.</div>
+
                 <input type="text" name="email" #email="ngModel" id="email" ngModel placeholder="Username" required>
-                <div  *ngIf="email.touched && email.invalid" class="alert alert-danger">Email is required and should be minimum {{ username.errors.minlength.requiredLength }} characters.</div>
+                
+                <div  *ngIf="email.touched && email.invalid" class="alert alert-danger">Email is required and should be minimum {{ email.errors.minlength.requiredLength }} characters.</div>
+
               <input type="password" name="password" #password="ngModel" id="password" ngModel placeholder="Password" required>
                 
                 <input *ngIf="visible" type="submit" value="Login" (click)="loginUser(forma)">
               </form>
               </div>
-              <!-- <div class="form">
-              <h3>Create an account</h3>
-              <form action="#" method="post">
-                <input type="text" name="Username" placeholder="Username" required="">
-                <input type="password" name="Password" placeholder="Password" required="">
-                <input type="email" name="Email" placeholder="Email Address" required="">
-                <input type="text" name="Phone" placeholder="Phone Number" required="">
-                <input type="submit" value="Register">
-              </form>
-              </div> -->
               <div class="cta"><a href="#">Forgot your password?</a></div>
             </div>
           </div>

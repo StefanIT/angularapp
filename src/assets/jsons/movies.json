@@ -38,5 +38,16 @@
         "views": 34,
         "featured": true,
         "created_at": "2018-07-16"
+    },
+    
+    {
+        "id" : 5,
+        "title": "X-Men",
+        "image": "images/m11.jpg",
+        "year": 2016,
+        "rating": 4,
+        "views": 10,
+        "featured": true,
+        "created_at": "2018-07-23"
     }
 ]

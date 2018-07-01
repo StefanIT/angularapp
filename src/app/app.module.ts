@@ -21,6 +21,11 @@ import { LatestMoviesComponent } from './components/home/latest-movies/latest-mo
 import { environment } from '../environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from '../app/components/contact/contact.component';
+import { HttpModule, BaseRequestOptions } from '@angular/http';
+
+import { fakeBackendProvider } from './helpers/fake-backend';
+import { MockBackend } from '@angular/http/testing';
+
 
 @NgModule({
   declarations: [
@@ -42,6 +47,7 @@ import { ContactComponent } from '../app/components/contact/contact.component';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    HttpModule,
     RouterModule.forRoot([
       {
           path: "",
@@ -61,7 +67,13 @@ import { ContactComponent } from '../app/components/contact/contact.component';
   FormsModule,
   ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+
+      // For creating a mock back-end. You don't need these in a real app. 
+      fakeBackendProvider,
+      MockBackend,
+      BaseRequestOptions
+  ],
   bootstrap: [AppComponent, HeaderComponent, NavbarComponent, FooterComponent, SocialNetworksComponent]
 })
 export class AppModule { }

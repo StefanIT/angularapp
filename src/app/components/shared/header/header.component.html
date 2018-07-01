@@ -13,7 +13,8 @@
     <div class="w3l_sign_in_register">
       <ul>
         <li><i class="fa fa-phone" aria-hidden="true"></i> (+000) 123 345 653</li>
-        <li><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li>
+        <li *ngIf="!authService.isLoggedIn()"><a (click)="showDialog = !showDialog" >Login</a></li>
+        <li *ngIf="authService.isLoggedIn()"><a (click)="authService.logout()" >Logout</a></li>
       </ul>
     </div>
     <div class="clearfix"> </div>
@@ -21,18 +22,5 @@
 </div>
 <!-- //header -->
 <!-- bootstrap-pop-up -->
-<app-login-modal></app-login-modal>
-<script>
-  $('.toggle').click(function(){
-    // Switches the Icon
-    $(this).children('i').toggleClass('fa-pencil');
-    // Switches the forms  
-    $('.form').animate({
-    height: "toggle",
-    'padding-top': 'toggle',
-    'padding-bottom': 'toggle',
-    opacity: "toggle"
-    }, "slow");
-  });
-</script>
-<!-- //bootstrap-pop-up -->
+<app-login-modal [(visible)]="showDialog">
+</app-login-modal>

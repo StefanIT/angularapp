@@ -3,7 +3,7 @@ import { environment } from '../../environments/environment.prod';
 import { Movie } from '../models/movie';
 import { map, filter } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { FirebaseListObservable } from 'angularfire2/firebase-node';
 
 @Injectable({
@@ -32,5 +32,9 @@ export class MoviesService {
     // ));
     this.movies = this.db.list('/movies').valueChanges();
     return this.movies;
+  }
+
+  get(){
+   return this.db.list('/movies').valueChanges();
   }
 }

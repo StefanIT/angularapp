@@ -15,11 +15,12 @@ export class SingleMovieComponent implements OnInit {
   movie : FirebaseListObservable<Movie>;
 
   constructor(private route: ActivatedRoute, private service: MoviesService) {
-    this.id = this.route.snapshot.params.id;
+    
     console.log(this.id);
    }
 
   ngOnInit() {
+    this.id = this.route.snapshot.params.id;
     this.service.getAll().subscribe( (response) => {
       this.movie = response.filter(x => x.id == this.id)[0];
     })

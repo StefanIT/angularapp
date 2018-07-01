@@ -26,6 +26,8 @@ import { HttpModule, BaseRequestOptions } from '@angular/http';
 import { fakeBackendProvider } from './helpers/fake-backend';
 import { MockBackend } from '@angular/http/testing';
 import { CommentsComponent } from './components/single-movie/comments/comments.component';
+import { SidebarComponent } from './components/single-movie/sidebar/sidebar.component';
+import { KeyValuePipe } from './pipes/key-value.pipe';
 
 
 @NgModule({
@@ -43,7 +45,9 @@ import { CommentsComponent } from './components/single-movie/comments/comments.c
     HomeComponent,
     SingleMovieComponent,
     ContactComponent,
-    CommentsComponent
+    CommentsComponent,
+    SidebarComponent,
+    KeyValuePipe
   ],
   imports: [
     BrowserModule,

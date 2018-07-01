@@ -1,7 +1,12 @@
 <div class="all-comments">
     <div class="all-comments-info">
       <a href="#">Comments</a>
-      <div class="agile-info-wthree-box">
+      <div *ngIf="!authService.isLoggedIn()">
+        <h3>LOGIN TO POST COMMENTS.</h3>
+        <p><b>Username:</b> stefan@gmail.com, </p>
+        <p><b>password:</b> stefan.</p>
+      </div>
+      <div class="agile-info-wthree-box" *ngIf="authService.isLoggedIn()">
         <form #forma="ngForm" (ngSubmit)="addComment(forma)" name="forma">
           <input type="text" placeholder="Name" required="" #name="ngModel" required ngModel name="name" pattern="^[A-Z][a-z]{2,}$">
 
@@ -25,13 +30,14 @@
         </form>
       </div>
     </div>
-    <div class="media-grids">
-      <div class="media" *ngFor="let comment of comments">
+    <div class="media-grids" *ngIf="comments">
+      <div class="media" *ngFor="let comment of comments" [@itemAnim1]>
         <h5>{{ comment.name }}</h5>
         <div class="media-left">
           <a href="#">
             <img src="assets/images/user.jpg" title="One movies" alt=" " />
           </a>
+         
         </div>
         <div class="media-body">
           <span>{{ comment.subject }} 
@@ -39,6 +45,7 @@
           </span>
           <p> {{ comment.message }} </p>
         </div>
+        <div class="clearfix"></div>
       </div>
 
     </div>

@@ -2,8 +2,9 @@
 
 ## Application design
 
-![alt text](https://raw.githubusercontent.com/StefanIT/angularapp/src/assets/images/slika1.png)
-
+![slika1](https://user-images.githubusercontent.com/24513404/42131064-0e4df1b6-7cf9-11e8-90b7-6409cbd4d17a.png)
+![slika2](https://user-images.githubusercontent.com/24513404/42131065-0e6db686-7cf9-11e8-9620-122e22c01b04.png)
+![slika3](https://user-images.githubusercontent.com/24513404/42131066-0e8b43d6-7cf9-11e8-8f44-7e1b0ccec096.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 

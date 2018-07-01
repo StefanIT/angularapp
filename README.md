@@ -2,7 +2,7 @@
 
 ## Application design
 
-![alt text](http://prntscr.com/k1cuno)
+![alt text](https://raw.githubusercontent.com/StefanIT/angularapp/src/assets/images/slika1.png)
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.

@@ -1,5 +1,10 @@
 # MoviesApp
 
+## Application design
+
+![alt text](http://prntscr.com/k1cuno)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
